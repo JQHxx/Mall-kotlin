@@ -1,9 +1,11 @@
 package com.hjq.kotlin.base.common
 
-import android.annotation.SuppressLint
 import android.app.Application
 import kotlin.properties.Delegates
 
+/**
+ * Application基类
+ * */
 open class BaseApplication : Application() {
 
     override fun onCreate() {

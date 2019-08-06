@@ -1,13 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-
-
+    compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -27,19 +25,28 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Anko Commons
+    api "org.jetbrains.anko:anko-commons:$anko_version"
+    // Appcompat-v7 (only Anko Commons)
+    api "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+    // Support-v4 (only Anko Commons)
+    api "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
 
+    def dependencies = rootProject.ext.dependencies
+    //Android Support
+    api dependencies.supportAppCompat
+    api dependencies.supportDesign
+    api dependencies.supportRecyclerView
+    api dependencies.supportCardView
+    api dependencies.constraintLayout
     // RxKotlin and RxAndroid
-    implementation 'io.reactivex:rxkotlin:1.0.0'
-    implementation 'io.reactivex:rxandroid:1.2.1'
-
-    //retrofit2
-    implementation "com.squareup.okhttp3:okhttp:${ok_http_version}"
-    implementation "com.squareup.retrofit2:retrofit:${retrofit_version}"
-    implementation "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
-    implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
-    implementation "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
+    api dependencies.rxKotlin
+    api dependencies.rxandroid
+    //retrofit
+    api dependencies.retrofit
+    api dependencies.retrofitGsonConverter
+    api dependencies.retrofitRxjava2Adapter
+    api dependencies.okhttp
+    api dependencies.okhttpLogging
 }

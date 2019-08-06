@@ -1,7 +1,8 @@
 package com.hjq.kotlinmall.common
 
 import android.app.Application
-import android.util.Log
+
+// import com.hjq.kotlin.base.common.BaseApplication
 
 
 /**
@@ -11,6 +12,5 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.d("debug", "msg")
     }
 }
