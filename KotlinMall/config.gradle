@@ -1,0 +1,7 @@
+ext {
+    //support
+    compileSdkVersion = 27
+    minSdkVersion = 15
+    targetSdkVersion = 27
+    supportLibVersion = "27.1.1"
+}
