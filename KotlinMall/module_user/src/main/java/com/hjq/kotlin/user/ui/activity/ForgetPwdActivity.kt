@@ -4,13 +4,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.hjq.kotlin.user.R
 
+
 /**
- * 用户注册
+ * 忘记密码
  */
-class RegisterActivity : AppCompatActivity() {
+class ForgetPwdActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_forget_pwd)
     }
 }

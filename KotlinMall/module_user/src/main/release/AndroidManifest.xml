@@ -3,6 +3,14 @@
           package="com.hjq.kotlin.user">
 
     <application>
+        <activity android:name=".ui.activity.UserInfoActivity">
+        </activity>
+        <activity android:name=".ui.activity.ForgetPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.ResetPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.LoginActivity">
+        </activity>
         <activity android:name=".ui.activity.RegisterActivity">
         </activity>
     </application>

@@ -5,12 +5,12 @@ import android.os.Bundle
 import com.hjq.kotlin.user.R
 
 /**
- * 用户注册
+ * 用户信息
  */
-class RegisterActivity : AppCompatActivity() {
+class UserInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_user_info)
     }
 }

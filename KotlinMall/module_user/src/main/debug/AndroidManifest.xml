@@ -11,6 +11,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.UserInfoActivity">
+        </activity>
+        <activity android:name=".ui.activity.ForgetPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.ResetPwdActivity">
+        </activity>
+        <activity android:name=".ui.activity.LoginActivity">
+        </activity>
     </application>
 
 </manifest>

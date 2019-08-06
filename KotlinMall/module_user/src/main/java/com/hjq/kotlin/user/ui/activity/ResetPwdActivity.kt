@@ -5,12 +5,12 @@ import android.os.Bundle
 import com.hjq.kotlin.user.R
 
 /**
- * 用户注册
+ * 重置密码
  */
-class RegisterActivity : AppCompatActivity() {
+class ResetPwdActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_reset_pwd)
     }
 }
