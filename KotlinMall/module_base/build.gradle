@@ -43,6 +43,7 @@ dependencies {
     api dependencies.supportRecyclerView
     api dependencies.supportCardView
     api dependencies.constraintLayout
+
     // RxKotlin and RxAndroid
     api dependencies.rxKotlin
     api dependencies.rxandroid
@@ -52,4 +53,13 @@ dependencies {
     api dependencies.retrofitRxjava2Adapter
     api dependencies.okhttp
     api dependencies.okhttpLogging
+
+    //dagger
+    api dependencies.dagger
+    kapt dependencies.daggerCompiler
+    //rxlifecycle
+    api dependencies.rxlifecycle
+    api dependencies.rxlifecycleComponent
+    //glide
+    api dependencies.glide
 }

@@ -50,6 +50,11 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    def dependencies = rootProject.ext.dependencies
+    //dagger
+    api dependencies.dagger
+    kapt dependencies.daggerCompiler
+
 
     implementation project(path: ':module_base')
 }

@@ -3,6 +3,7 @@
           package="com.hjq.kotlin.user">
 
     <application
+            android:name="com.hjq.kotlin.base.common.BaseApplication"
             android:theme="@style/AppTheme">
         <activity android:name=".ui.activity.RegisterActivity">
             <intent-filter>

@@ -15,6 +15,7 @@
     <style name="AppTheme.Black" parent="@style/AppTheme">
         <item name="android:windowBackground">@color/common_black</item>
     </style>
+
     <!--Activity进场。出场动画-->
     <style name="AnimationActivity" parent="@android:style/Animation.Activity">
         <!--用于设置打开新的Activity并进入新的Activity展示的动画-->
@@ -25,6 +26,22 @@
         <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
         <!--用于设置关闭当前Activity时展示的动画-->
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- 加载弹框样式 -->
+    <style name="LightDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--设置是否浮现在activity之上true|false-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!-- 加载弹框样式 -->
+    <style name="LightProgressDialog" parent="LightDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 </resources>
