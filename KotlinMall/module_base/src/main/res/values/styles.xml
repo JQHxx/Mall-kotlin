@@ -44,4 +44,34 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <!--横向分隔线-->
+    <style name="DividerFixedHeight">
+        <item name="android:background">@color/common_divider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_divider_height</item>
+    </style>
+    <!-- 竖向分隔线 -->
+    <style name="DividerFixedWidth">
+        <item name="android:background">@color/common_divider</item>
+        <item name="android:layout_width">@dimen/common_divider_width</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!-- 竖向分隔线 带上下间距 -->
+    <style name="DividerFixedWidth.MarginTopBottom" parent="@style/DividerFixedWidth">
+        <item name="android:layout_marginTop">@dimen/common_margin_middle</item>
+        <item name="android:layout_marginBottom">@dimen/common_margin_middle</item>
+    </style>
+
+    <!-- 横屏按钮样式，带不可用状态 -->
+    <!-- 按钮样式-->
+    <style name="FullBtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:background">@drawable/btn_common_selector</item>
+        <item name="android:padding">@dimen/common_padding_middle</item>
+        <item name="android:layout_margin">@dimen/common_margin</item>
+        <item name="android:enabled">false</item>
+    </style>
+
 </resources>
