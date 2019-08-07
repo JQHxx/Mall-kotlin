@@ -1,1 +1,1 @@
-include ':app', ':module_base', ':module_user'
+include ':app', ':module_base', ':module_user', ':module_pay', ':module_goods', ':moudule_order', ':module_message', ':module_provider'

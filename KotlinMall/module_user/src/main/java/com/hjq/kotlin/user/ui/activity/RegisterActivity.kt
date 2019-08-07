@@ -19,7 +19,6 @@ import org.jetbrains.anko.toast
 class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView, View.OnClickListener {
 
 
-
     /**
      * 注册回调
      */
@@ -34,6 +33,9 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView, Vie
         initView()
     }
 
+    /**
+     * 初始化视图
+     */
     private fun initView() {
         mRegisterBtn.enable(mMobileEt, { isBtnEnable() })
         mRegisterBtn.enable(mVerifyCodeEt, { isBtnEnable() })

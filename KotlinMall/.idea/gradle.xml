@@ -10,7 +10,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/module_base" />
+            <option value="$PROJECT_DIR$/module_goods" />
+            <option value="$PROJECT_DIR$/module_message" />
+            <option value="$PROJECT_DIR$/module_pay" />
+            <option value="$PROJECT_DIR$/module_provider" />
             <option value="$PROJECT_DIR$/module_user" />
+            <option value="$PROJECT_DIR$/moudule_order" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
