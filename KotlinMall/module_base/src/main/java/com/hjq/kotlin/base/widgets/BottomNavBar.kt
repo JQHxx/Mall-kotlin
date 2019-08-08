@@ -80,7 +80,7 @@ class BottomNavBar @JvmOverloads constructor(
             .setFirstSelectedPosition(0)
             .initialise()
 
-         // setIconItemMargin(this,10,5,5)
+          // setIconItemMargin(this,10,5,5)
     }
 
 
@@ -98,6 +98,7 @@ class BottomNavBar @JvmOverloads constructor(
         for (i in fields.indices) {
             val field = fields[i]
             field.isAccessible = true
+            // 层级改变了，设置没有用了
             if (field.name == "mTabContainer") {
                 try {
                     //反射得到 mTabContainer
