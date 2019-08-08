@@ -6,6 +6,8 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.hjq.kotlin.base.common.AppManager
 import com.hjq.kotlin.base.ui.activity.BaseActivity
 import com.hjq.mall.R
+import com.hjq.mall.ui.fragment.HomeFragment
+import com.hjq.mall.ui.fragment.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -20,12 +22,24 @@ class MainActivity : BaseActivity() {
     //Fragment栈管理
     private val mStack = Stack<Fragment>()
 
+    //主界面Fragment
+    private val mHomeFragment: HomeFragment by lazy { HomeFragment() }
+    //商品分类Fragment
+    private val mCategoryFragment: HomeFragment by lazy { HomeFragment() }
+    //购物车Fragment
+    private val mCartFragment: HomeFragment by lazy { HomeFragment() }
+    //消息Fragment
+    private val mMsgFragment: HomeFragment by lazy { HomeFragment() }
+    // 我的
+    private val mMineFragment: MineFragment by lazy { MineFragment() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initFragment()
         initBottomNav()
+        changeFragment(0)
     }
 
     /*
@@ -33,20 +47,18 @@ class MainActivity : BaseActivity() {
  */
     private fun initFragment() {
         val manager = supportFragmentManager.beginTransaction()
-        /*
         manager.add(R.id.mContainer, mHomeFragment)
         manager.add(R.id.mContainer, mCategoryFragment)
         manager.add(R.id.mContainer, mCartFragment)
         manager.add(R.id.mContainer, mMsgFragment)
-        manager.add(R.id.mContainer, mMeFragment)
+        manager.add(R.id.mContainer, mMineFragment)
         manager.commit()
 
         mStack.add(mHomeFragment)
         mStack.add(mCategoryFragment)
         mStack.add(mCartFragment)
         mStack.add(mMsgFragment)
-        mStack.add(mMeFragment)
-        */
+        mStack.add(mMineFragment)
     }
 
 
@@ -67,6 +79,7 @@ class MainActivity : BaseActivity() {
             }
         })
         mBottomNavBar.checkMsgBadge(false)
+        mBottomNavBar.checkCartBadge(0)
     }
 
     /*
