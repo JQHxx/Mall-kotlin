@@ -1,13 +1,11 @@
-package com.hjq.kotlinmall.ui.activity
+package com.hjq.mall.ui.activity
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v4.app.Fragment
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.hjq.kotlin.base.common.AppManager
 import com.hjq.kotlin.base.ui.activity.BaseActivity
-import com.hjq.kotlinmall.R
+import com.hjq.mall.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*

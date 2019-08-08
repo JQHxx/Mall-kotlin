@@ -1,6 +1,4 @@
-package com.hjq.kotlinmall.common
-
-import android.app.Application
+package com.hjq.mall.common
 
 import com.hjq.kotlin.base.common.BaseApplication
 

@@ -54,7 +54,10 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
             }
 
             R.id.mLoginBtn -> {
-                Log.d("message", mPushProvider?.getPushId())
+//                mPushProvider.let {
+//                    Log.d("message", it!!.getPushId())
+//                }
+
             }
 
             R.id.mForgetPwdTv -> {

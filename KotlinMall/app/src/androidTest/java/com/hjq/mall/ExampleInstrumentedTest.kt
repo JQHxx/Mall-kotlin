@@ -1,4 +1,4 @@
-package com.hjq.kotlinmall
+package com.hjq.mall
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

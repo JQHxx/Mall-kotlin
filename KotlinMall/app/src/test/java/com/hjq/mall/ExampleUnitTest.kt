@@ -1,4 +1,4 @@
-package com.hjq.kotlinmall
+package com.hjq.mall
 
 import org.junit.Test
 
