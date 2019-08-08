@@ -1,6 +1,7 @@
 package com.hjq.kotlin.base.ui.activity
 
 import android.os.Bundle
+import com.alibaba.android.arouter.launcher.ARouter
 import com.hjq.kotlin.base.common.BaseApplication
 import com.hjq.kotlin.base.presenter.BasePresenter
 import com.hjq.kotlin.base.presenter.view.BaseView
@@ -32,6 +33,8 @@ abstract class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), BaseView 
         injectComponent()
         //初始化加载框
         mProgressLoading = ProgressLoading.create(this)
+        //ARouter注册
+        ARouter.getInstance().inject(this)
 
     }
 

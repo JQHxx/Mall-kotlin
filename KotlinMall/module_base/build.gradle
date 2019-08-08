@@ -62,4 +62,21 @@ dependencies {
     api dependencies.rxlifecycleComponent
     //glide
     api dependencies.glide
+
+    //Alert View
+    api dependencies.alertView
+    //Circle ImageView
+    api dependencies.circleimageview
+    //Take Photo
+    api dependencies.takephoto
+
+    //七牛
+    api dependencies.qiniu
+    //底部导航
+    api dependencies.bottom_navigation_bar
+    //Banner
+    api dependencies.banner
+
+    //ARouter
+    api dependencies.arouter
 }

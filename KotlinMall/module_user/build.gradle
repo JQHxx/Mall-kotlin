@@ -7,6 +7,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -54,7 +60,8 @@ dependencies {
     //dagger
     api dependencies.dagger
     kapt dependencies.daggerCompiler
+    //ARouter
+    kapt dependencies.arouterCompiler
 
-
-    implementation project(path: ':module_base')
+    implementation project(path: ':module_provider')
 }
