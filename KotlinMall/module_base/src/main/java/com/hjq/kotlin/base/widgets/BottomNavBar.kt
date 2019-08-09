@@ -15,6 +15,7 @@ import com.ashokvarma.bottomnavigation.ShapeBadgeItem
 import com.ashokvarma.bottomnavigation.TextBadgeItem
 import com.hjq.kotlin.base.R
 import com.hjq.kotlin.base.common.BaseApplication
+import kotlin.reflect.KClass
 
 
 /**
@@ -80,7 +81,7 @@ class BottomNavBar @JvmOverloads constructor(
             .setFirstSelectedPosition(0)
             .initialise()
 
-          // setIconItemMargin(this,10,5,5)
+        // setIconItemMargin(this,10,25,14)
     }
 
 
@@ -93,12 +94,15 @@ class BottomNavBar @JvmOverloads constructor(
      * @param textSize            单位：dp，文字大小
      */
     public fun setIconItemMargin(bottomNavigationBar: BottomNavigationBar, space: Int, imgLen: Int, textSize: Int) {
-        val barClass = bottomNavigationBar.javaClass
-        val fields = barClass.declaredFields
+        // val barClass = bottomNavigationBar.javaClass
+        // val fields = barClass.declaredFields
+        // 反射
+        val barClass = bottomNavigationBar::class.java
+        val fields = barClass.getDeclaredFields()
+
         for (i in fields.indices) {
             val field = fields[i]
             field.isAccessible = true
-            // 层级改变了，设置没有用了
             if (field.name == "mTabContainer") {
                 try {
                     //反射得到 mTabContainer
