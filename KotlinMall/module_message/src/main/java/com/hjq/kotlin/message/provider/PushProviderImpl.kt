@@ -10,7 +10,7 @@ import com.hjq.kotlin.provider.router.RouterPath
 /**
  * 模块间接口调用  提供PushId的实现
  */
-@Route(path = RouterPath.ModuleMessage.PATH_MESSAGE_PUSH)
+// @Route(path = RouterPath.ModuleMessage.PATH_MESSAGE_PUSH) 使用这个注解无法打包
 class PushProviderImpl : PushProvider {
 
     private var mContext: Context? = null
